@@ -23,23 +23,27 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>OpenAI Quickstart</title>
+        <title>Dev Shah</title>
         <link rel="icon" href="/dog.png" />
       </Head>
 
       <main className={styles.main}>
         <img src="/dog.png" className={styles.icon} />
-        <h3>Name my pet</h3>
+        <h3>Ask something from AI</h3>
         <form onSubmit={onSubmit}>
           <input
             type="text"
             name="animal"
-            placeholder="Enter an animal"
+            placeholder="Example : Write a tagline for a gym"
             value={animalInput}
             onChange={(e) => setAnimalInput(e.target.value)}
           />
-          <input type="submit" value="Generate names" />
+          <input type="submit" value="Blow my mind" />
         </form>
+        <h4>It may take upto 10s to process</h4>
+        <h4 style={{textAlign:'center'}}>Example : Write a conversation between Elon Musk and Sundar Pichai 
+        : Elon Musk: Hi, Sundar. Sundar Pichai: Hi, Elon. How are you doing? Elon Musk: I'm doing well.
+         How are you? Sundar Pichai: I'm doing well, working on some initiatives in India.</h4>
         <div className={styles.result}>{result}</div>
       </main>
     </div>
